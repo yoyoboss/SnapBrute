@@ -1,4 +1,4 @@
-# SnapBrute v5
+# SnapBrute v6
 <br>
 Brute Force SnapChat [SnapChat API]<br>
 <br>
@@ -10,4 +10,3 @@ Email : 1337r00t@1337leaks.info<br>
 <br><br>
 * HappyCracking :) *
 <br>
-# التعديل على الحقوق يعرضك للخطر :)
