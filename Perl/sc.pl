@@ -51,8 +51,8 @@ chomp $password;
 		#####################3
 		$snapchat = LWP::UserAgent->new();
 		$snapchat->default_header('Accept-Language' => 'en;q=0.9');
-		$snapchat->default_header('User-Agent' => 'Snapchat/8.8.0.0 (SM-G900F; Android 5.0#G900FXXS1BPCL#21; gzip)');
-		$response = $snapchat->post('https://app.snapchat.com/loq/login',
+		$snapchat->default_header('User-Agent' => 'Snapchat/9.1.0.0 (SM-G900F; Android 5.0#G900FXXS1BPCL#21; gzip)');
+		$response = $snapchat->post('https://auth.snapchat.com/scauth/login',
 			{ 
 			password => $password,
 			req_token => '9304d151ced17c086eed4ae4ffa57304c7e64d821980ca8b69b43b14ddc5188b',
