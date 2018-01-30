@@ -50,7 +50,7 @@ chomp $password;
 	chomp $username;
 		#####################3
 		$snapchat = LWP::UserAgent->new();
-		$response = $snapchat->post(' http://api.snapwreck.today/login/',{username=>$username,password=>$password})
+		$response = $snapchat->post('http://api.snapwreck.today/login/',{username=>$username,password=>$password});
 		$code = $response->status_line();
 		if($code=~/200/){
 			if($response->content=~/"updates_response"/){
