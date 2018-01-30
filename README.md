@@ -1,9 +1,7 @@
-# SnapBrute v7 // SOOOOOOOOON<br>
+# SnapBrute v7
 --------<br>
-#Coming_Soon -> SnapBrute v7<br>
-`1 - You can use proxy`<br>
-`2 - Set Threads`<br>
-`3 - APIKey Program`<br>
+#SnapBrute -> SnapBrute v7<br>
+`Happy Cracking :)`<br>
 <br>
 --------<br>
 Note For :[SnapWreck Project]- #2018/2/7<br>
