@@ -1,11 +1,10 @@
 # SnapBrute v7 // SOOOOOOOOON<br>
 --------<br>
 #Coming_Soon -> SnapBrute v7<br>
-`<br>
-1 - You can use proxy<br>
-2 - Set Threads<br>
-3 - APIKey Program<br>
-`<br>
+`1 - You can use proxy`<br>
+`2 - Set Threads`<br>
+`3 - APIKey Program`<br>
+<br>
 --------<br>
 Note For :[SnapWreck Project]- #2018/2/7<br>
 Endpoint: Login / API SC (3rd-party) -> https://auth.snapwreck.today/scauth/login<br>
