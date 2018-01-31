@@ -86,7 +86,7 @@ chomp $password;
 							print "\n-----\nSorry, your ip [Blocked]\nwait to bypass blocked !...\n-----\n";
 							sleep(18);
 						}else{
-							print $response->content();
+							print "ShutDown API-SC !\n";
 						}
 					}
 				}
